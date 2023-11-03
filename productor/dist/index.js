@@ -22,7 +22,7 @@ function publicar() {
             // creamos un canal
             const canal = yield coneccion.createChannel();
             const nombreExchange = 'topic_exchange';
-            const routingKey = 'actuadores.luz';
+            const routingKey = 'sensores.temperatura';
             yield canal.assertExchange(nombreExchange, 'topic', { durable: true });
             const mensajes = ['Mensaje L 1', 'Mensaje L 2', 'Mensaje L 3'];
             for (const mensaje of mensajes) {
